@@ -6,33 +6,73 @@
   <title>Ausescortsbooking</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #ffcce6, #cce6ff); /* baby pink + powder blue */
+      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
+      background: linear-gradient(to right, #ffcce6, #cce6ff);
+      color: #333;
     }
     header {
-      background: #fff;
-      padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 40px 20px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     header h1 {
       margin: 0;
       color: #e60073;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    section h2 {
+      color: #e60073;
+      margin-bottom: 20px;
+    }
+    .about, .why, .services {
+      background: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 900px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .why ul, .services ul {
+      list-style: none;
+      padding: 0;
+    }
+    .why li, .services li {
+      background: #ffe6f2;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+    .why li:hover, .services li:hover {
+      transform: scale(1.05);
+      background: #f2e6ff;
     }
     .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       padding: 20px;
     }
     .model-card {
       background: #fff;
       padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .model-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     }
     .model-card img {
       width: 100%;
@@ -62,17 +102,43 @@
     footer {
       background: #fff;
       text-align: center;
-      padding: 10px;
+      padding: 20px;
       margin-top: 20px;
       box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Ausescortsbooking</h1>
     <p>Luxury Companions for Your Wildest Desires</p>
   </header>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>At <strong>Ausescortsbooking</strong>, we pride ourselves on offering exceptional companionship services designed to satisfy even the most refined tastes. Our company focuses on discretion, quality, and unforgettable experiences that leave our clients coming back again and again.</p>
+  </section>
+
+  <section class="why">
+    <h2>Why Choose Us</h2>
+    <ul>
+      <li>Unmatched luxury experiences tailored to your desires</li>
+      <li>High-quality service with discretion and professionalism</li>
+      <li>Hand-picked companions who embody charm and elegance</li>
+      <li>Personalized experiences designed to meet your expectations</li>
+    </ul>
+  </section>
+
+  <section class="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Relaxation and wellness experiences</li>
+      <li>Exclusive companionship for dinners, events, travel, and girlfriend experience </li>
+      <li>Personalized sessions that prioritize comfort and bed satisfaction</li>
+      <li>Unforgettable encounters designed around your preferences</li>
+    </ul>
+  </section>
 
   <div class="container">
     <!-- Model 1 -->
@@ -137,7 +203,9 @@
   </div>
 
   <footer>
-    <p>Contact us: australiaescortbooking1989@gmail.com</p>
+   <p>Contact us: <a href="mailto:australiaescortbooking1989@gmail.com">australiaescortbooking1989@gmail.com</a></p>
+    <p>&copy; 2010 Ausescortsbooking. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>
