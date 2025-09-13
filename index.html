@@ -4,58 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ausescortsbooking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       margin: 0;
-      background: linear-gradient(to right, #ffcce6, #cce6ff);
-      color: #333;
+      background: linear-gradient(135deg, #2b002b, #660033, #ff99cc);
+      color: #fff;
     }
     header {
       text-align: center;
-      padding: 40px 20px;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 50px 20px;
+      background: rgba(0,0,0,0.4);
     }
     header h1 {
       margin: 0;
-      color: #e60073;
-      font-size: 2.5rem;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: #ff99cc;
+      text-shadow: 0 0 10px #ff3399;
     }
     header p {
-      font-size: 1.2rem;
-      color: #666;
+      font-size: 1.3rem;
+      color: #f2d9e6;
     }
     section {
       padding: 40px 20px;
       text-align: center;
     }
     section h2 {
-      color: #e60073;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #ff99cc;
       margin-bottom: 20px;
+      text-shadow: 0 0 8px #ff66b2;
     }
     .about, .why, .services {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.1);
       margin: 20px auto;
-      padding: 20px;
+      padding: 25px;
       border-radius: 15px;
       max-width: 900px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 20px rgba(255,153,204,0.3);
     }
     .why ul, .services ul {
       list-style: none;
       padding: 0;
     }
     .why li, .services li {
-      background: #ffe6f2;
+      background: rgba(255, 255, 255, 0.15);
       margin: 10px 0;
       padding: 12px;
       border-radius: 10px;
-      transition: transform 0.2s;
+      transition: transform 0.2s, background 0.3s;
     }
     .why li:hover, .services li:hover {
       transform: scale(1.05);
-      background: #f2e6ff;
+      background: rgba(255, 153, 204, 0.4);
     }
     .container {
       display: grid;
@@ -64,15 +69,15 @@
       padding: 20px;
     }
     .model-card {
-      background: #fff;
+      background: rgba(0,0,0,0.6);
       padding: 15px;
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(255,153,204,0.3);
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .model-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 20px rgba(255,153,204,0.6);
     }
     .model-card img {
       width: 100%;
@@ -80,31 +85,44 @@
       object-fit: cover;
       border-radius: 12px;
     }
+    .model-card h3 {
+      color: #ffb3d9;
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem;
+      margin: 10px 0 5px;
+    }
     .rate {
       font-weight: bold;
       margin-top: 10px;
-      color: #e60073;
+      color: #ff80bf;
     }
     .book-btn {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 12px;
       padding: 10px 20px;
-      background: #e60073;
+      background: #ff3399;
       color: #fff;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 30px;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.2s;
     }
     .book-btn:hover {
-      background: #b30059;
+      background: #cc0066;
+      transform: scale(1.05);
     }
     footer {
-      background: #fff;
+      background: rgba(0,0,0,0.6);
       text-align: center;
       padding: 20px;
-      margin-top: 20px;
-      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #ffb3d9;
+      box-shadow: 0 -2px 8px rgba(255,153,204,0.3);
+    }
+    footer a {
+      color: #ff80bf;
+      text-decoration: none;
     }
   </style>
 </head>
