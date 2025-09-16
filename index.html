@@ -3,171 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ausescortsbooking</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <title>ausescortsbooking.com</title>
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      background: linear-gradient(135deg, #2b002b, #660033, #ff99cc);
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #660033);
       color: #fff;
-    }
-    header {
-      text-align: center;
-      padding: 50px 20px;
-      background: rgba(0,0,0,0.4);
-    }
-    header h1 {
       margin: 0;
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.5rem;
-      color: #ff99cc;
-      text-shadow: 0 0 10px #ff3399;
-    }
-    header p {
-      font-size: 1.3rem;
-      color: #f2d9e6;
-    }
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    section h2 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.5rem;
-      color: #ff99cc;
-      margin-bottom: 20px;
-      text-shadow: 0 0 8px #ff66b2;
-    }
-    .about, .why, .services {
-      background: rgba(255, 255, 255, 0.1);
-      margin: 20px auto;
-      padding: 25px;
-      border-radius: 15px;
-      max-width: 900px;
-      box-shadow: 0 4px 20px rgba(255,153,204,0.3);
-    }
-    .why ul, .services ul {
-      list-style: none;
       padding: 0;
     }
-    .why li, .services li {
-      background: rgba(255, 255, 255, 0.15);
-      margin: 10px 0;
-      padding: 12px;
-      border-radius: 10px;
-      transition: transform 0.2s, background 0.3s;
+    h1, h2, h3 {
+      text-align: center;
     }
-    .why li:hover, .services li:hover {
-      transform: scale(1.05);
-      background: rgba(255, 153, 204, 0.4);
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      color: #ff99cc;
+      margin-bottom: 20px;
+    }
+    .section p {
+      line-height: 1.6;
+      text-align: center;
     }
     .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       padding: 20px;
     }
     .model-card {
-      background: rgba(0,0,0,0.6);
-      padding: 15px;
+      background: rgba(255, 255, 255, 0.05);
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(255,153,204,0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 20, 147, 0.6);
+      transition: transform 0.3s;
     }
     .model-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(255,153,204,0.6);
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 20, 147, 0.9);
     }
     .model-card img {
       width: 100%;
-      height: 350px;
+      height: 250px;
       object-fit: cover;
       border-radius: 12px;
     }
-    .model-card h3 {
-      color: #ffb3d9;
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.8rem;
+    h2 {
       margin: 10px 0 5px;
+      color: #ff66cc;
+    }
+    p {
+      margin: 5px 0;
     }
     .rate {
       font-weight: bold;
-      margin-top: 10px;
-      color: #ff80bf;
+      color: #ffccff;
+    }
+    .stats {
+      font-size: 0.9em;
+      color: #f2f2f2;
     }
     .book-btn {
       display: inline-block;
-      margin-top: 12px;
-      padding: 10px 20px;
+      margin-top: 10px;
+      padding: 8px 16px;
       background: #ff3399;
-      color: #fff;
+      color: white;
       text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: background 0.3s, transform 0.2s;
+      border-radius: 25px;
+      transition: background 0.3s;
     }
     .book-btn:hover {
-      background: #cc0066;
-      transform: scale(1.05);
+      background: #ff0066;
+    }
+    /* Rates table */
+    .rates-section {
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      margin: 40px auto;
+      border-radius: 20px;
+      max-width: 800px;
+      box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
+    }
+    .rates-section h2 {
+      color: #ff99cc;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      color: #fff;
+    }
+    table th, table td {
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    table th {
+      background: rgba(255, 20, 147, 0.3);
+      color: #ffccff;
+    }
+    table tr:hover {
+      background: rgba(255, 255, 255, 0.08);
     }
     footer {
-      background: rgba(0,0,0,0.6);
+      background: #111;
+      color: #ccc;
       text-align: center;
       padding: 20px;
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #ffb3d9;
-      box-shadow: 0 -2px 8px rgba(255,153,204,0.3);
+      margin-top: 40px;
     }
     footer a {
-      color: #ff80bf;
+      color: #ff99cc;
       text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Ausescortsbooking</h1>
-    <p>Luxury Companions for Your Wildest Desires</p>
-  </header>
+  <!-- About Us -->
+  <div class="section">
+    <h1>💖 Welcome to Ausescortsbooking 💖</h1>
+    <p>
+      At <strong>ausescortsbooking.com</strong>, we redefine the art of pleasure and luxury companionship.  
+      Our elite models are carefully chosen for their beauty, elegance, and irresistible charm.  
+      Whether it’s a romantic dinner, a sensual massage, or an unforgettable private experience,  
+      we guarantee discreet, professional, and indulgent encounters that will leave you longing for more.
+    </p>
+  </div>
 
-  <section class="about">
-    <h2>About Us</h2>
-    <p>At <strong>Ausescortsbooking</strong>, we pride ourselves on offering exceptional companionship services designed to satisfy even the most refined tastes. Our company focuses on discretion, quality, and unforgettable experiences that leave our clients coming back again and again.</p>
-  </section>
+  <!-- Why Choose Us -->
+  <div class="section">
+    <h2>🔥 Why Choose Us 🔥</h2>
+    <p>
+      ✨ High-class, professional, and seductive models ready to satisfy your deepest desires.<br>
+      ✨ Wide range of massage services: Thai Massage, Erotic Massage, Deep Tissue, Shiatsu & Swedish.<br>
+      ✨ Exclusive intimacy options: Missionary, Doggy Style, Cowgirl, Rider Astride, Pretzel Dip, Hot Seat & more.<br>
+      ✨ Unlimited shots (sex) included — no rush, no limits, just pure satisfaction.<br>
+      ✨ Discreet, secure, and unforgettable moments tailored just for you.
+    </p>
+  </div>
 
-  <section class="why">
-    <h2>Why Choose Us</h2>
-    <ul>
-      <li>Matched luxury experiences tailored to your desires</li>
-      <li>High-quality service with discretion and professionalism</li>
-      <li>Hand-picked companions who embody charm and elegance</li>
-      <li>Personalized experiences designed to meet your expectations</li>
-    </ul>
-  </section>
-
-  <section class="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Relaxation and wellness experiences</li>
-      <li>Exclusive companionship for dinners, events, travel, and girlfriend experience </li>
-      <li>Personalized sessions that prioritize comfort and bed satisfaction</li>
-      <li>Unforgettable encounters designed around your preferences</li>
-    </ul>
-  </section>
-
+  <!-- Models -->
+  <h2 style="padding:20px; color:#ff99cc;">✨ Our Gorgeous Models ✨</h2>
   <div class="container">
-       <!-- Model 1 -->
+
+    <!-- Model 1 -->
     <div class="model-card">
       <img src="model1.jpg" alt="Shane">
       <h2>Shane, 24</h2>
       <p>Elegant and charming. Perfect for dinner dates or private sessions.</p>
-      <p><strong>Height:</strong> 167cm | <strong>Weight:</strong> 50kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 27" | <strong>Hips:</strong> 40"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p><strong>Inclusions:</strong> Dinner, Drinks, Private Time</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 167cm | Weight: 51kg | Bust: 44" | Waist: 27" | Hips: 40"</p>
       <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Shane" class="book-btn">Book Now</a>
     </div>
 
@@ -176,10 +167,8 @@
       <img src="model2.jpg" alt="Emily">
       <h2>Emily, 24</h2>
       <p>Fun and adventurous. Loves nightlife and luxury travel.</p>
-      <p><strong>Height:</strong> 166cm | <strong>Weight:</strong> 51kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 28" | <strong>Hips:</strong> 41"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p><strong>Inclusions:</strong> Night Out, Drinks, Private Time</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 165cm | Weight: 50kg | Bust: 44" | Waist: 26" | Hips: 39"</p>
       <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Emily" class="book-btn">Book Now</a>
     </div>
 
@@ -188,10 +177,8 @@
       <img src="model3.jpg" alt="Hailey">
       <h2>Hailey, 23</h2>
       <p>Young and vibrant. Full of energy for an unforgettable experience.</p>
-      <p><strong>Height:</strong> 165cm | <strong>Weight:</strong> 49kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 26" | <strong>Hips:</strong> 38"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p><strong>Inclusions:</strong> Dinner Date, Private Time</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 169cm | Weight: 52kg | Bust: 44" | Waist: 28" | Hips: 42"</p>
       <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Hailey" class="book-btn">Book Now</a>
     </div>
 
@@ -200,10 +187,8 @@
       <img src="model4.jpg" alt="Hyacinth">
       <h2>Hyacinth, 25</h2>
       <p>Mature and sophisticated, perfect for upscale events and travel.</p>
-      <p><strong>Height:</strong> 170cm | <strong>Weight:</strong> 53kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 29" | <strong>Hips:</strong> 42"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p><strong>Inclusions:</strong> Events, Travel, Private Time</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 170cm | Weight: 53kg | Bust: 44" | Waist: 29" | Hips: 44"</p>
       <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Hyacinth" class="book-btn">Book Now</a>
     </div>
 
@@ -212,10 +197,8 @@
       <img src="model5.jpg" alt="Stephanie">
       <h2>Stephanie, 26</h2>
       <p>Playful and passionate. Loves intimate moments and deep connections.</p>
-      <p><strong>Height:</strong> 168cm | <strong>Weight:</strong> 52kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 28" | <strong>Hips:</strong> 43"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p><strong>Inclusions:</strong> Private Time, Dinner</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 166cm | Weight: 49kg | Bust: 44" | Waist: 27" | Hips: 38"</p>
       <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Stephanie" class="book-btn">Book Now</a>
     </div>
 
@@ -224,89 +207,95 @@
       <img src="model6.jpg" alt="Kimberly">
       <h2>Kimberly, 26</h2>
       <p>Stylish and outgoing. The perfect partner for parties and nightlife.</p>
-      <p><strong>Height:</strong> 167cm | <strong>Weight:</strong> 51kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 27" | <strong>Hips:</strong> 40"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p><strong>Inclusions:</strong> Party, Drinks, Private Time</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 168cm | Weight: 52kg | Bust: 44" | Waist: 28" | Hips: 41"</p>
       <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Kimberly" class="book-btn">Book Now</a>
     </div>
 
     <!-- Model 7 -->
     <div class="model-card">
-      <img src="model7.jpg" alt="Kate">
+      <img src="model7.jpeg" alt="Kate">
       <h2>Kate, 24</h2>
-      <p>Graceful and confident. A stunning companion for elegant nights.</p>
-      <p><strong>Height:</strong> 168cm | <strong>Weight:</strong> 51kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 27" | <strong>Hips:</strong> 40"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p>Inclusions: Dinner, Events, Private Time</p>
+      <p>Sensual and sweet. Perfect companion for romantic evenings.</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 165cm | Weight: 50kg | Bust: 44" | Waist: 27" | Hips: 39"</p>
       <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Kate" class="book-btn">Book Now</a>
     </div>
 
     <!-- Model 8 -->
     <div class="model-card">
-      <img src="model8.jpg" alt="Karen">
+      <img src="model8.jpeg" alt="Karen">
       <h2>Karen, 22</h2>
-      <p>Sophisticated yet playful. A delightful presence for any occasion.</p>
-      <p><strong>Height:</strong> 165cm | <strong>Weight:</strong> 49kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 26" | <strong>Hips:</strong> 39"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p>Inclusions: Dinner, Drinks, Private Time</p>
+      <p>Young, wild and adventurous. Always full of surprises.</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 166cm | Weight: 49kg | Bust: 44" | Waist: 26" | Hips: 38"</p>
       <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Karen" class="book-btn">Book Now</a>
     </div>
 
     <!-- Model 9 -->
     <div class="model-card">
-      <img src="model9.jpg" alt="Alexa">
+      <img src="model9.jpeg" alt="Alexa">
       <h2>Alexa, 24</h2>
-      <p>Charming and adventurous. The perfect partner for nightlife and travel.</p>
-      <p><strong>Height:</strong> 170cm | <strong>Weight:</strong> 53kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 29" | <strong>Hips:</strong> 42"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p>Inclusions: Night Out, Travel, Private Time</p>
+      <p>Confident and seductive. Perfect for intimate luxury moments.</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 169cm | Weight: 51kg | Bust: 44" | Waist: 28" | Hips: 42"</p>
       <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Alexa" class="book-btn">Book Now</a>
     </div>
 
     <!-- Model 10 -->
     <div class="model-card">
-      <img src="model10.jpg" alt="Chloe">
+      <img src="model10.jpeg" alt="Chloe">
       <h2>Chloe, 23</h2>
-      <p>Sweet and sophisticated. A gorgeous match for refined evenings.</p>
-      <p><strong>Height:</strong> 166cm | <strong>Weight:</strong> 50kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 28" | <strong>Hips:</strong> 41"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p>Inclusions: Dinner, Drinks, Private Time</p>
+      <p>Flirty and charming, loves to keep things exciting and fun.</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 167cm | Weight: 50kg | Bust: 44" | Waist: 27" | Hips: 40"</p>
       <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Chloe" class="book-btn">Book Now</a>
     </div>
 
     <!-- Model 11 -->
     <div class="model-card">
-      <img src="model11.jpg" alt="Shaine Yu">
+      <img src="model11.jpeg" alt="Shaine Yu">
       <h2>Shaine Yu, 23</h2>
-      <p>Exotic and alluring. Brings warmth and energy to every encounter.</p>
-      <p><strong>Height:</strong> 169cm | <strong>Weight:</strong> 52kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 27" | <strong>Hips:</strong> 43"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p>Inclusions: Events, Dinner, Private Time</p>
-      <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Shaine%20Yu" class="book-btn">Book Now</a>
+      <p>Exotic beauty with a playful, irresistible aura.</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 165cm | Weight: 49kg | Bust: 44" | Waist: 26" | Hips: 38"</p>
+      <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20ShaineYu" class="book-btn">Book Now</a>
     </div>
 
     <!-- Model 12 -->
     <div class="model-card">
-      <img src="model12.jpg" alt="Claire">
+      <img src="model12.jpeg" alt="Claire">
       <h2>Claire, 22</h2>
-      <p>Fresh and radiant. The perfect balance of beauty and elegance.</p>
-      <p><strong>Height:</strong> 165cm | <strong>Weight:</strong> 49kg</p>
-      <p><strong>Bust:</strong> 44" | <strong>Waist:</strong> 26" | <strong>Hips:</strong> 38"</p>
-      <p class="rate"><strong>Rates:</strong> $250 (1h), $300 (2h), $350 (3h), $400 (4h), $450 (6h), $500 (8h), $600 (10h)</p>
-      <p>Inclusions: Dinner, Private Time</p>
+      <p>Delicate and sweet, with a fiery side you’ll never forget.</p>
+      <p class="rate">Rates: $250–$600</p>
+      <p class="stats">Height: 168cm | Weight: 51kg | Bust: 44" | Waist: 27" | Hips: 39"</p>
       <a href="mailto:australiaescortbooking1989@gmail.com?subject=Booking%20Claire" class="book-btn">Book Now</a>
     </div>
 
+  </div>
 
+  <!-- Rates Section -->
+  <div class="rates-section">
+    <h2>💎 Exclusive Rates 💎</h2>
+    <table>
+      <tr>
+        <th>Duration</th>
+        <th>Rate</th>
+      </tr>
+      <tr><td>1 Hour</td><td>$250</td></tr>
+      <tr><td>2 Hours</td><td>$300</td></tr>
+      <tr><td>3 Hours</td><td>$350</td></tr>
+      <tr><td>4 Hours</td><td>$400</td></tr>
+      <tr><td>6 Hours</td><td>$450</td></tr>
+      <tr><td>8 Hours</td><td>$500</td></tr>
+      <tr><td>10 Hours</td><td>$600</td></tr>
+    </table>
+  </div>
+
+  <!-- Footer -->
   <footer>
-   <p>Contact us: <a href="mailto:australiaescortbooking1989@gmail.com">australiaescortbooking1989@gmail.com</a></p>
-    <p>&copy; 2010 Ausescortsbooking. All Rights Reserved.</p>
+    <p>📩 Contact us: <a href="mailto:australiaescortbooking1989@gmail.com">australiaescortbooking1989@gmail.com</a></p>
+    <p>© 2010–2025 ausescortsbooking.com | All Rights Reserved</p>
   </footer>
 
 </body>
